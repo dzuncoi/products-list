@@ -5,7 +5,7 @@ import { createStore, applyMiddleware, compose } from 'redux'
 import thunk from 'redux-thunk'
 
 import rootReducer from './redux/root-reducer'
-import './index.css'
+import './index.module.scss'
 import App from './App'
 
 // eslint-disable-next-line no-underscore-dangle
