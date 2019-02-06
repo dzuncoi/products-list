@@ -8,7 +8,7 @@ const { Header, Content, Footer } = Layout
 
 const AppLayout = props => (
   <Layout>
-    <Header>
+    <Header className={styles.header}>
       <div className={styles.fakeLogo} />
       <Menu
         theme="dark"

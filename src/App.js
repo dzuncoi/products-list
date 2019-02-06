@@ -1,23 +1,7 @@
 import React from 'react'
-import { Button } from 'antd'
 
-const App = () => (
-  <div className="App">
-    <header className="App-header">
-      <Button type="primary">Dzuncoi</Button>
-      <p>
-        Edit <code>src/App.js</code> and save to reload.
-      </p>
-      <a
-        className="App-link"
-        href="https://reactjs.org"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Learn React
-      </a>
-    </header>
-  </div>
-)
+import Product from './containers/Product/product'
+
+const App = () => <Product />
 
 export default App
