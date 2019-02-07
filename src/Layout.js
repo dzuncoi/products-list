@@ -16,7 +16,7 @@ const AppLayout = props => (
         defaultSelectedKeys={['1']}
         style={{ lineHeight: '64px' }}
       >
-        <Menu.Item key="1">Search</Menu.Item>
+        <Menu.Item key="1">Products</Menu.Item>
       </Menu>
     </Header>
     <Content className={styles.content}>
