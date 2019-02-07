@@ -6,8 +6,8 @@ import TextInput from '../../elements/Input/input'
 const Search = () => (
   <Form>
     <Field
-      id="search"
-      name="search"
+      id="q"
+      name="q"
       component={TextInput}
       placeholder="Search"
     />

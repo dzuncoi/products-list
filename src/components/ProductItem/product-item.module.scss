@@ -1,0 +1,17 @@
+.productCard {
+  padding: 8px;
+  margin-bottom: 16px;
+  :global {
+    .ant-card-body {
+      padding: 16px 0;
+    }
+  }
+}
+
+.productMeta {
+  :global {
+    .ant-card-meta-detail .ant-card-meta-title {
+      margin-bottom: 0;
+    }
+  }
+}
