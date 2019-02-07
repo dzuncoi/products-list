@@ -1,5 +1,5 @@
 import React from 'react'
-import { Col, Row, Icon } from 'antd'
+import { Col, Row, Icon, Empty } from 'antd'
 import { Formik } from 'formik'
 
 import SearchAPI from '../../apis/search/search'
@@ -35,6 +35,8 @@ class ProductContainer extends React.Component {
   }
 
   render() {
+    const { isLoading, data } = this.state
+    const isEmpty = !isLoading && data.results && data.results.length <= 0
     return (
       <Formik
         name="product"
@@ -47,8 +49,9 @@ class ProductContainer extends React.Component {
             </Col>
             <Col span={18}>
               <Search {...formikProps} />
-              {this.state.isLoading ?
-                <Icon type="loading" /> :
+              {isLoading && <Icon type="loading" />}
+              {isEmpty && <Empty />}
+              {(!isLoading && !isEmpty) && (
                 <React.Fragment>
                   <ProductsList
                     data={this.state.data.results}
@@ -59,7 +62,7 @@ class ProductContainer extends React.Component {
                     {...formikProps}
                   />
                 </React.Fragment>
-              }
+              )}
             </Col>
           </Row>
         )}
