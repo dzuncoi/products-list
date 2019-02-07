@@ -12,3 +12,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+:global {
+  .LazyLoad {
+    opacity: 0;
+    transition: all 0.25s ease-in-out;
+    &.is-visible {
+      opacity: 1;
+    }
+  }
+}

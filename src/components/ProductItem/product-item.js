@@ -1,13 +1,20 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Card } from 'antd'
+import LazyLoad from 'react-lazy-load'
 
 import styles from './product-item.module.scss'
 
 const ProductItem = ({ data }) => (
   <Card
     bordered={false}
-    cover={<img alt={data.name} src={data.thumbnail_url} />}
+    cover={
+      <div className={styles.imageContainer}>
+        <LazyLoad offsetVertical={100}>
+          <img alt={data.name} src={data.thumbnail_url} />
+        </LazyLoad>
+      </div>
+    }
     className={styles.productCard}
     hoverable
   >
